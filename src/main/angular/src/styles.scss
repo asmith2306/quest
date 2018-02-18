@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/theme.scss";
+@import "assets/scss/mixins.scss";
+body{
+    background-color: $default-background-color;
+}
+
+.app-routed-component-container-div{
+    max-width: 800px;
+    @include margin-top-increase(2em);  
+    @include margin-left-increase(2em);  
+}
+
+/*
+* material style overrides
+*/
+.mat-form-field{
+    width: 100% !important;
+}
+
+.mat-form-field-subscript-wrapper{
+    font-size: 70% !important;
+}

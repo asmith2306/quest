@@ -1,0 +1,7 @@
+@mixin margin-top-increase($amount){
+    margin-top:$amount;
+}
+
+@mixin margin-left-increase($amount){
+    margin-left:$amount;
+}

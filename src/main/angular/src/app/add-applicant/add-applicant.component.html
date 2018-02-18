@@ -1,0 +1,50 @@
+<div class="add-applicant-div">
+    <mat-card>
+        <form (ngSubmit)="onSubmit()" #applicantForm="ngForm">
+            <div fxLayout="column">
+                <div fxFlex="1 1 auto">
+                    <mat-form-field>
+                        <input matInput placeholder="Name" name="name"
+                               [(ngModel)]="applicant.name" required maxlength="25">
+                    </mat-form-field>
+                </div>
+                <div fxFlex="1 1 auto">
+                    <mat-form-field>
+                        <input matInput placeholder="PPS number" name="pps"
+                               [(ngModel)]="applicant.pps" required>
+                    </mat-form-field>
+                </div>
+                <div  fxFlex="1 1 auto">
+                    <mat-form-field >
+                        <input matInput name="dob" [(ngModel)]="selectedDate"
+                               [matDatepicker]="dobPicker" placeholder="Date of birth" required
+                               [max]="maxDate" >
+                               <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker startView="year"></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div fxFlex="1 1 auto">
+                    <mat-form-field>
+                        <input matInput placeholder="Mobile phone" name="mobilePhone"
+                               [(ngModel)]="applicant.mobile" appPrefix="08" #mobilePhone="ngModel">
+                        <mat-error *ngIf="mobilePhone.hasError('badPrefix')">
+                            Must start with '08'
+                        </mat-error>
+                    </mat-form-field>  
+                </div>
+            </div>
+
+            <br/>
+
+            <div fxLayout fxLayoutGap="25px" fxLayoutAlign="end stretch">
+                <div class="cancel-button">
+                    <button mat-raised-button color="accent" type="button" (click)="toRoute('dashboard')">Cancel</button>
+                </div>
+                <div class="submit-button">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="!applicantForm.form.valid">Submit</button>
+                </div>
+            </div>
+
+        </form>
+    </mat-card>
+</div>

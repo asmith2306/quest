@@ -77,6 +77,7 @@
                         <configuration>
                             <workingDirectory>${angular.ui.dir}</workingDirectory>
                             <executable>npm.cmd</executable>
+                            <!--<executable>npm</executable>-->
                             <commandlineArgs>install</commandlineArgs>
                         </configuration>
                     </execution>
@@ -89,6 +90,7 @@
                         <configuration>
                             <workingDirectory>${angular.ui.dir}</workingDirectory>
                             <executable>ng.cmd</executable>
+                            <!--<executable>ng</executable>-->
                             <commandlineArgs>build --aot</commandlineArgs>
                         </configuration>
                     </execution>

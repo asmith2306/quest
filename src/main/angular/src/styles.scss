@@ -7,8 +7,9 @@ body{
 
 .app-routed-component-container-div{
     max-width: 800px;
-    @include margin-top-increase(2em);  
-    @include margin-left-increase(2em);  
+    @include margin-top-increase(2em);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*

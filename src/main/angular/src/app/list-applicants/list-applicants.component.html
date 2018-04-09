@@ -1,28 +1,30 @@
-<mat-table #table [dataSource]="dataSource" *ngIf="showTable">
+<div class="app-routed-component-container-div">
+    <mat-table #table [dataSource]="dataSource" *ngIf="showTable">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
 
-    <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-        <mat-cell *matCellDef="let applicant"> {{applicant.name}} </mat-cell>
-    </ng-container>
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let applicant"> {{applicant.name}} </mat-cell>
+        </ng-container>
 
-    <ng-container matColumnDef="pps">
-        <mat-header-cell *matHeaderCellDef> PPSN </mat-header-cell>
-        <mat-cell *matCellDef="let applicant"> {{applicant.pps}} </mat-cell>
-    </ng-container>
+        <ng-container matColumnDef="pps">
+            <mat-header-cell *matHeaderCellDef> PPSN </mat-header-cell>
+            <mat-cell *matCellDef="let applicant"> {{applicant.pps}} </mat-cell>
+        </ng-container>
 
-    <ng-container matColumnDef="dob">
-        <mat-header-cell *matHeaderCellDef> D.O.B </mat-header-cell>
-        <mat-cell *matCellDef="let applicant"> {{applicant.dob}} </mat-cell>
-    </ng-container>
+        <ng-container matColumnDef="dob">
+            <mat-header-cell *matHeaderCellDef> D.O.B </mat-header-cell>
+            <mat-cell *matCellDef="let applicant"> {{applicant.dob}} </mat-cell>
+        </ng-container>
 
-    <ng-container matColumnDef="mobile">
-        <mat-header-cell *matHeaderCellDef> Mobile Phone </mat-header-cell>
-        <mat-cell *matCellDef="let applicant"> {{applicant.mobile}} </mat-cell>
-    </ng-container>
+        <ng-container matColumnDef="mobile">
+            <mat-header-cell *matHeaderCellDef> Mobile Phone </mat-header-cell>
+            <mat-cell *matCellDef="let applicant"> {{applicant.mobile}} </mat-cell>
+        </ng-container>
 
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>
